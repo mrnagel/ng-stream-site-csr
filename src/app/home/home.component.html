@@ -1,0 +1,8 @@
+
+
+<div class="flex-container">
+    @for(data of searchedSeriesArray | async; track data.mal_id) {
+    <app-series-card [data]="data">  </app-series-card>
+}
+</div>
+

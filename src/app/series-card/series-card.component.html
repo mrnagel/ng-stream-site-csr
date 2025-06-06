@@ -1,0 +1,8 @@
+
+    <mat-card [routerLink] = "['details', data.mal_id]">
+        <img class="card-image" mat-card-image [src]="data.images.webp.image_url" />
+        <p id="title" [matTooltip]="data.title_english || data.title">{{ data.title_english || data.title}}</p>
+    </mat-card>
+
+
+
