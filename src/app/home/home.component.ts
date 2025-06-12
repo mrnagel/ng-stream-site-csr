@@ -4,7 +4,6 @@ import { SeriesService } from '../series.service';
 import { inject } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
-import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -13,11 +12,13 @@ import { Input } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  @Input() searchedSeriesArray!: BehaviorSubject<any>; //use ! to ensure that this will be initialized later
+  //@Input() searchedSeriesArray!: BehaviorSubject<any>; //use ! to ensure that this will be initialized later
 
-  
+  private seriesService: SeriesService = inject(SeriesService);
+  searchedSeriesArray!: BehaviorSubject<any>; 
 
-  
+  ngOnInit() {
+    this.searchedSeriesArray = this.seriesService.searchedSeriesData;
+  }
 
-  
 }

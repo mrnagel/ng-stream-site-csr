@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject} from '@angular/core';
 import { Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltip } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-series-card',
@@ -12,8 +13,7 @@ import { RouterModule } from '@angular/router';
 })
 export class SeriesCardComponent {
   @Input() data!: any;
-
-
+  
 
 
 

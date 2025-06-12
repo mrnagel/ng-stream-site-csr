@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-    <h1>AniPository</h1>
+    <h1 [routerLink]="['/']">AniPository</h1>
     <form [formGroup] = "searchForm">
         <mat-form-field appearance="fill" subscriptSizing="dynamic" color="primary">
             <input type="text" formControlName="searchQuery" matInput placeholder ="Search anime..." (keyup.enter)="onSubmit()">
@@ -9,4 +9,4 @@
 
 </mat-toolbar>
 
-<app-home [searchedSeriesArray]="searchedSeriesArray"></app-home>
+<router-outlet></router-outlet>
